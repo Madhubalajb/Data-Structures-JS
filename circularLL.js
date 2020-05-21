@@ -37,8 +37,15 @@ class circularLinkedList {
                 previousNode = currentNode 
                 currentNode = currentNode.next
             }
-            previousNode.next = newNode
-            newNode.next = currentNode
+            if(!currentNode) {
+                previousNode.next = newNode
+                newNode.next = currentNode
+            }
+            else {
+                previousNode.next = newNode
+                this.tail = newNode
+                this.tail.next= this.head
+            }
         }
     }
 
