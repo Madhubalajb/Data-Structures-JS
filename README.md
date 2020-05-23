@@ -1,1 +1,1 @@
-# WIP - Data Structures Visualized
+# Data Structures using JavaScript
