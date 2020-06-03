@@ -38,4 +38,8 @@ class Graph {
             this.edges[vertex2].splice(index2, 1)
         }
     }
+
+    print() {
+        
+    }
 }
