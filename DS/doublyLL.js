@@ -73,6 +73,22 @@ class doublyLinkedList {
             nextNode.previous = previousNode
         }
     }
+    
+    reverse() {
+        let current = this.head
+        let nextNode
+        while(current) {
+            nextNode = current.next
+            current.next = current.previous
+            current.previous = nextNode
+            if(!current.previous) {
+                this.head = current
+            }
+            current = nextNode
+        }
+        return this.head
+    }
+    
 
     traverseData() {
         let currentNode = this.head

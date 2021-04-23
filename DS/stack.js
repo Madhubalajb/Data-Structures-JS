@@ -3,9 +3,9 @@ class stack {
         this.stack = []
     }
 
-    push(number) {
-        this.stack.push(number)
-        return `Pushed ${number}`
+    push(value) {
+        this.stack.push(value)
+        return `Pushed ${value}`
     }
 
     pop() {
@@ -27,6 +27,6 @@ class stack {
         if(this.stack.length === 0) {
             return 'Stack is empty'
         }
-        console.log(this.stack)
+        console.log(this.stack.join())
     }
 }
