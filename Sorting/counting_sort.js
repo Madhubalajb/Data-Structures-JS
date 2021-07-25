@@ -1,4 +1,5 @@
-//Counting sort is differnent from the other comparision sorting algorithms (Insertion sort, Selection sort...)
+//Counting sort is different from the other comparison sorting algorithms (Insertion sort, Selection sort...)
+//Its an integer sorting algorithm
 //Time Complexity = O(n + k)
 
 function counting_sort(array) {

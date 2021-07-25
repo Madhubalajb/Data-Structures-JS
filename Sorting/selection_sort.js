@@ -17,3 +17,5 @@ function selection_sort(arr) {
 }
 let unsorted = [3,5,1,2,9,0];
 selection_sort(unsorted);
+
+// Selection sort is an in place comparison sorting algorithm.  Time Complexity - Quadratic O(n^2)

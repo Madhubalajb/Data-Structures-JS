@@ -34,7 +34,7 @@ class doublyLinkedList {
             this.tail = (this.tail) ? this.tail : newNode
         }
         else {
-            for(let i = 1; i <= position; i++) {
+            for(let i = 1; i < position; i++) {
                 currentNode = currentNode.next
             }
             previousNode = currentNode.previous
@@ -47,13 +47,13 @@ class doublyLinkedList {
 
     modifyData(data, position) {
         let currentNode = this.head
-        for(let i = 1; i <= position; i++) {
+        for(let i = 1; i < position; i++) {
             currentNode = currentNode.next
         }
         currentNode.data = data
     }
 
-    removeData(position) {
+    removeDataAtPosition(position) {
         let currentNode = this.head
         let previousNode
         let nextNode
@@ -62,16 +62,24 @@ class doublyLinkedList {
             if(this.head) this.head.previous = null
         }
         else {
-            for(let i = 1; i <= position; i++) {
+            for(let i = 1; i < position; i++) {
                 currentNode = currentNode.next
             }
             previousNode = currentNode.previous
             nextNode = currentNode.next
-            console.log(previousNode.data)
-            console.log(nextNode.data)
+            delete(currentNode)
             previousNode.next = nextNode
             nextNode.previous = previousNode
         }
+    }
+
+    removeDataAtLast() {
+        let currentNode = this.tail
+        let previousNode = this.tail.previous
+        this.tail = previousNode
+        if(previousNode) previousNode.next = null
+        delete(currentNode)
+        if(!this.tail) this.head = this.tail
     }
     
     reverse() {

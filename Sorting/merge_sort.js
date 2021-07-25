@@ -1,3 +1,5 @@
+//Merge sort is a divide and conquer algorithm
+// Time Complexity - O(N logN)
 function merge(left, right) {
     let c = [];  
 

@@ -1,14 +1,12 @@
 //Time Complexity -- O(n^2)
 function bubble_sort(arr) {
     let temp = 0;
-    let flag;
     for(let i = arr.length; i >= 1; i--) {
         for(let j = 0; j < i - 1; j++) {
             if(arr[j] > arr[j + 1]) {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
-                arr[j] + 1 = temp;
-                flag = 1;
+                arr[j + 1] = temp;
             }
         }
     }
